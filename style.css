@@ -12,8 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
-  background-color: rgb(245, 240, 240);
+  padding: 0.4rem 0;
+  background-color: #ffffff;
 }
 
 .container {
@@ -29,13 +29,16 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  /* justify-content: space-between;   */
   list-style: none;
 }
 
 .nav-item {
-  padding: 10px;
+  padding: 1rem 0.5rem;
   font-size: 0.9rem;
+}
+.nav-menu > .nav-item:hover {
+  background-color: rgb(210, 210, 210);
+  cursor: pointer;
 }
 
 .nav-item a {
@@ -46,16 +49,18 @@
 .drop-btn {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 3rem;
   background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -69,7 +74,8 @@
 }
 
 .dropdown-content a:hover {
-  background-color: rgb(245, 240, 240);
+  background-color: #333333;
+  color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -103,7 +109,7 @@ li {
 .carousel {
   position: relative;
   filter: drop-shadow(0 0 10px #0003);
-  height: 100vh;
+  height: 95vh;
 }
 
 .carousel__viewport {
@@ -194,8 +200,8 @@ li {
   display: inline-block;
   width: 0.8rem;
   height: 0.8rem;
-  border: 0.16rem solid white;
-  /* background-color: #fff; */
+  /* border: 0.16rem solid #fff; */
+  background-color: #767676;
   border-radius: 50%;
   font-size: 0;
   margin: 8px 1px;
@@ -256,19 +262,19 @@ li {
   border-left: 1rem solid salmon;
 }
 .color2 {
-  background-color: rgb(130, 212, 130);
+  background-color: #6a996f;
   color: #fff;
 }
 .color2 .arrow-right {
-  border-left: 1rem solid rgb(130, 212, 130);
+  border-left: 1rem solid #6a996f;
 }
 .color3 {
-  background-color: rgb(146, 199, 199);
+  background-color: #5696c2;
   color: #fff;
 }
 
 .value-item img {
-  height: 2rem;
+  height: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -326,14 +332,15 @@ li {
   align-items: center;
   border: none;
   background-color: rgb(92, 92, 255);
-  text-transform: uppercase;
+  margin-top: 0.4 rem;
+  cursor: pointer;
 }
 
 footer {
-  background-color: gray;
+  background-color: #333333;
   color: #fff;
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0 0.5rem 0;
 }
 
 footer > p {

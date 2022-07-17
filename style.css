@@ -186,7 +186,7 @@ li {
 .carousel__navigation {
   position: absolute;
   right: 0;
-  bottom: 20px;
+  bottom: 2.5rem;
   left: 0;
   text-align: center;
 }
@@ -201,7 +201,7 @@ li {
   width: 0.8rem;
   height: 0.8rem;
   /* border: 0.16rem solid #fff; */
-  background-color: #767676;
+  background-color: rgb(102, 102, 102);
   border-radius: 50%;
   font-size: 0;
   margin: 8px 1px;

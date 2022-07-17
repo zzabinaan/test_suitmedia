@@ -26,49 +26,39 @@
 
     <div class="hero carousel">
       <ol class="carousel__viewport">
-        <li id="carousel__slide1" tabindex="0" class="carousel__slide" style="background-image: url(img/bg.jpg)">
+        <li id="carousel__slide1" tabindex="0" class="carousel__slide active" style="background-image: url(img/bg.jpg)">
           <div class="caption">THIS IS A PLACE WHERE TECHNOLOGY & CREATIVITY FUSED INTO DIGITAL CHEMISTRY</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide2" class="carousel__prev">
-              <img src="img/next.png" alt="" />
+            <a href="#carousel__slide2" class="carousel__prev" onclick="nav2()">
+              <img src="img/next.png" alt="button-prev" />
             </a>
-            <a href="#carousel__slide2" class="carousel__next">
-              <img src="img/next.png" alt="" />
+            <a href="#carousel__slide2" class="carousel__next" onclick="nav2()">
+              <img src="img/next.png" alt="button-next" />
             </a>
           </div>
-          <aside class="carousel__navigation">
-            <ol class="carousel__navigation-list">
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide1" class="carousel__navigation-button active">Go to slide 1</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
-              </li>
-            </ol>
-          </aside>
         </li>
         <li id="carousel__slide2" tabindex="0" class="carousel__slide" style="background-image: url(img/about-bg.jpg)">
           <div class="caption">WE DONT HAVE THE BEST BUT WE HAVE THE GREATEST TEAM</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide1" class="carousel__prev">
+            <a href="#carousel__slide1" class="carousel__prev" onclick="nav()">
               <img src="img/next.png" alt="" />
             </a>
-            <a href="#carousel__slide1" class="carousel__next">
+            <a href="#carousel__slide1" class="carousel__next" onclick="nav()">
               <img src="img/next.png" alt="" />
             </a>
           </div>
-          <aside class="carousel__navigation">
-            <ol class="carousel__navigation-list">
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide2" class="carousel__navigation-button active">Go to slide 2</a>
-              </li>
-            </ol>
-          </aside>
         </li>
       </ol>
+      <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide1" id="nav-button1" class="carousel__navigation-button active">Go to slide 1</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide2" id="nav-button2" class="carousel__navigation-button">Go to slide 2</a>
+          </li>
+        </ol>
+      </aside>
     </div>
 
     <div class="values container">
@@ -129,6 +119,21 @@
     <script>
       const year = document.querySelector("#year");
       year.textContent = new Date().getFullYear();
+
+      // slidernav
+
+      var navbutton = document.getElementsByClassName("carousel__navigation-button");
+      var navbtn1 = document.getElementById("nav-button1");
+      var navbtn2 = document.getElementById("nav-button2");
+
+      function nav() {
+        navbtn2.classList.remove("active");
+        navbtn1.classList.add("active");
+      }
+      function nav2() {
+        navbtn1.classList.remove("active");
+        navbtn2.classList.add("active");
+      }
     </script>
   </body>
 </html>
